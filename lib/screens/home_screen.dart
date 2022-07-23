@@ -11,7 +11,7 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: const PreferredSize(
           preferredSize: Size.fromHeight(40),
-          child: Center(child: StyledAppbar())),
+          child: Center(child: StyledAppbar(title: "JobCKR"))),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 10),
@@ -50,7 +50,9 @@ class HomeScreen extends StatelessWidget {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const DiscoverScreen()));
+                              builder: (context) => const DiscoverScreen(
+                                    activeScreen: 0,
+                                  )));
                     },
                   ),
                 ),
@@ -66,8 +68,9 @@ class HomeScreen extends StatelessWidget {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) =>
-                                  const MentorOverviewScreen()));
+                              builder: (context) => const DiscoverScreen(
+                                    activeScreen: 1,
+                                  )));
                     },
                   ),
                 )

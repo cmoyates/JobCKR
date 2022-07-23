@@ -10,7 +10,8 @@ class OnboardingScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const PreferredSize(
-          preferredSize: Size.fromHeight(40), child: StyledAppbar()),
+          preferredSize: Size.fromHeight(40),
+          child: StyledAppbar(title: "JobCKR")),
       body: SafeArea(
           child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 24),

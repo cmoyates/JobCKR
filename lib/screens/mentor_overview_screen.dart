@@ -9,7 +9,7 @@ class MentorOverviewScreen extends StatelessWidget {
     return const Scaffold(
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(56),
-        child: StyledAppbar(),
+        child: StyledAppbar(title: "JobCKR"),
       ),
     );
   }

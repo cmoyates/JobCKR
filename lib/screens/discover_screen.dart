@@ -6,20 +6,34 @@ import 'package:jobckr/widgets/styled_appbar.dart';
 import 'package:jobckr/widgets/styled_navbar.dart';
 
 class DiscoverScreen extends StatefulWidget {
-  const DiscoverScreen({Key? key}) : super(key: key);
+  const DiscoverScreen({Key? key, required this.activeScreen})
+      : super(key: key);
+
+  final int activeScreen;
 
   @override
   State<DiscoverScreen> createState() => _DiscoverScreenState();
 }
 
 class _DiscoverScreenState extends State<DiscoverScreen> {
-  int activeScreen = 2;
+  @override
+  void initState() {
+    super.initState();
+    activeScreen = widget.activeScreen;
+  }
 
-  final screens = [CompaniesScreen(), MentorsScreen(), SettingsScreen()];
+  late int activeScreen;
+
+  final screens = [
+    const CompaniesScreen(),
+    const MentorsScreen(),
+    const SettingsScreen()
+  ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        resizeToAvoidBottomInset: false,
         bottomNavigationBar: StyledNavbar(
           activeScreen: activeScreen,
           selectDestination: (int index) =>
@@ -27,7 +41,7 @@ class _DiscoverScreenState extends State<DiscoverScreen> {
         ),
         appBar: const PreferredSize(
           preferredSize: Size.fromHeight(40),
-          child: StyledAppbar(),
+          child: StyledAppbar(title: "JobCKR"),
         ),
         body: screens[activeScreen]);
   }

@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 class StyledAppbar extends StatelessWidget {
-  const StyledAppbar({Key? key}) : super(key: key);
+  const StyledAppbar({Key? key, required this.title}) : super(key: key);
+
+  final String title;
 
   @override
   Widget build(BuildContext context) {
@@ -17,10 +19,10 @@ class StyledAppbar extends StatelessWidget {
       centerTitle: true,
       title: Container(
         margin: const EdgeInsets.only(top: 20),
-        child: const Text(
-          "JobCKR",
+        child: Text(
+          title,
           textAlign: TextAlign.center,
-          style: TextStyle(
+          style: const TextStyle(
               color: Colors.black, fontWeight: FontWeight.w700, fontSize: 20),
         ),
       ),

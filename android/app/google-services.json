@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "186212630464",
+    "project_id": "jobckr-26516",
+    "storage_bucket": "jobckr-26516.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:186212630464:android:c438dc28fb6fa1e6f15225",
+        "android_client_info": {
+          "package_name": "com.example.jobckr"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "186212630464-1pts843mu1etpj2pllmapuesq76fdqdc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7FSGpc4VFjH_4cN7xKHViVcnzn71ZmgE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "186212630464-1pts843mu1etpj2pllmapuesq76fdqdc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
