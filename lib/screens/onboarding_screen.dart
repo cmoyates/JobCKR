@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:jobckr/widgets/styled_appbar.dart';
 
 class OnboardingScreen extends StatelessWidget {
   const OnboardingScreen({Key? key}) : super(key: key);
@@ -7,16 +8,8 @@ class OnboardingScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-        title: const Center(
-          child: Text(
-            "JobCKR",
-            style: TextStyle(color: Colors.black, fontWeight: FontWeight.w600),
-          ),
-        ),
-      ),
+      appBar: const PreferredSize(
+          preferredSize: Size.fromHeight(100), child: StyledAppbar()),
       body: SafeArea(
           child: Padding(
         padding: const EdgeInsets.symmetric(vertical: 32, horizontal: 32),
