@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:jobckr/screens/discover_screen.dart';
+import 'package:jobckr/screens/mentor_overview_screen.dart';
 import 'package:jobckr/widgets/styled_appbar.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -8,7 +10,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const PreferredSize(
-          preferredSize: Size.fromHeight(56),
+          preferredSize: Size.fromHeight(40),
           child: Center(child: StyledAppbar())),
       body: SafeArea(
         child: Padding(
@@ -19,14 +21,15 @@ class HomeScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Container(
-                  margin: const EdgeInsets.only(top: 18),
+                  margin: const EdgeInsets.only(top: 34),
                   child: const Text(
                     "Discover your next opportunity and connect with a mentor.",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                         fontWeight: FontWeight.w100,
                         fontSize: 20,
-                        height: 0.91),
+                        height: 0.91,
+                        color: Color.fromARGB(255, 85, 85, 85)),
                   ),
                 ),
                 Container(
@@ -43,7 +46,12 @@ class HomeScreen extends StatelessWidget {
                       style:
                           TextStyle(fontSize: 17, fontWeight: FontWeight.w600),
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const DiscoverScreen()));
+                    },
                   ),
                 ),
                 Container(
@@ -54,7 +62,13 @@ class HomeScreen extends StatelessWidget {
                       style:
                           TextStyle(fontSize: 17, fontWeight: FontWeight.w600),
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  const MentorOverviewScreen()));
+                    },
                   ),
                 )
               ],

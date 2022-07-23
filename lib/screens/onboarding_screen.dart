@@ -10,7 +10,7 @@ class OnboardingScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const PreferredSize(
-          preferredSize: Size.fromHeight(56), child: StyledAppbar()),
+          preferredSize: Size.fromHeight(40), child: StyledAppbar()),
       body: SafeArea(
           child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 24),
@@ -20,7 +20,7 @@ class OnboardingScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Padding(
-                padding: const EdgeInsets.only(top: 32),
+                padding: const EdgeInsets.only(top: 70),
                 child: Image.asset(
                   "assets/images/sitting_on_floor.png",
                   height: 300,
@@ -32,10 +32,10 @@ class OnboardingScreen extends StatelessWidget {
                   "Streamline your job search process and find mentors on the way.",
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                      fontSize: 18,
+                      fontSize: 17,
                       fontWeight: FontWeight.w100,
                       height: 1.1,
-                      color: Color(0xff4F4F4F)),
+                      color: Color.fromARGB(255, 85, 85, 85)),
                 ),
               ),
               Container(

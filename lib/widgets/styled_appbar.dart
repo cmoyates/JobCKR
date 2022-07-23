@@ -15,11 +15,14 @@ class StyledAppbar extends StatelessWidget {
       backgroundColor: Colors.transparent,
       elevation: 0,
       centerTitle: true,
-      title: const Text(
-        "JobCKR",
-        textAlign: TextAlign.center,
-        style: TextStyle(
-            color: Colors.black, fontWeight: FontWeight.w700, fontSize: 20),
+      title: Container(
+        margin: const EdgeInsets.only(top: 20),
+        child: const Text(
+          "JobCKR",
+          textAlign: TextAlign.center,
+          style: TextStyle(
+              color: Colors.black, fontWeight: FontWeight.w700, fontSize: 20),
+        ),
       ),
       automaticallyImplyLeading: false,
     );
