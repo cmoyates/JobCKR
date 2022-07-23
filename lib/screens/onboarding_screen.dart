@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:jobckr/screens/home_screen.dart';
 import 'package:jobckr/widgets/styled_appbar.dart';
 
 class OnboardingScreen extends StatelessWidget {
@@ -9,7 +10,7 @@ class OnboardingScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const PreferredSize(
-          preferredSize: Size.fromHeight(100), child: StyledAppbar()),
+          preferredSize: Size.fromHeight(56), child: StyledAppbar()),
       body: SafeArea(
           child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 24),
@@ -31,24 +32,20 @@ class OnboardingScreen extends StatelessWidget {
                   "Streamline your job search process and find mentors on the way.",
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                      fontSize: 17,
+                      fontSize: 18,
                       fontWeight: FontWeight.w100,
-                      height: 1,
+                      height: 1.1,
                       color: Color(0xff4F4F4F)),
                 ),
               ),
               Container(
                 margin: const EdgeInsets.only(top: 35),
                 child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                        minimumSize: const Size(320, 58),
-                        primary: const Color(0xff07122A)),
                     onPressed: () {
-                      ScaffoldMessenger.of(context)
-                          .showSnackBar(const SnackBar(content: Text("Test")));
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const HomeScreen()));
                     },
                     child: const Text(
                       "Discover your opportunities",
